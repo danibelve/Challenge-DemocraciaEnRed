@@ -73,7 +73,7 @@ label[for="range"]{
 } 
 input[type=range] {
 	height: 20px;
-	width: 453px;
+	/*width: 453px;*/
 	margin: 0px;
 	border: 0px;
 }
