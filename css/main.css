@@ -181,3 +181,8 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #DBDBDB;
  }
+
+ /* FORM VALIDATION
+ input:invalid + .help {
+    display:inline-block;
+}*/

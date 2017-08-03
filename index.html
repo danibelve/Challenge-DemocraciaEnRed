@@ -12,10 +12,6 @@
 			
 			<!-- viewport -->
       		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      		<!-- scripts -->
-      		<!-- I had to do this because otherwise it wont read the JSON file -->
-      		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-			<script src="js/jquery-3.2.1.min.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -37,13 +33,13 @@
 			    		<h1 class="white-text">It's time to build your unicorn. Let's go!</h1>
 			    </div><!-- row for h1-->
 			    <div class="row white card-panel form">
-			    	<div class="col s12">
+			    	<form class="col s12" action="" method="get">
 				    		<div class="row name">
 					    		<div class="input-field">
-							          <input type="text">
-							          <label for="name" class="label" >Unicorn's Name</label>
+							          <input type="text" id="name">
+							          <label for="name" class="label">Unicorn's Name</label>
 							          <!--error-->
-							          <div><p>Name your unicorn!</p></div>
+							          <div id="name-error" class="hide"><p >Name your unicorn!</p></div>
 							          <!-- end error-->
 		        				</div><!-- input-field-->
 		        			</div><!-- name-->
@@ -51,13 +47,13 @@
 	      						<div class="input-field">
 								    <label for="select" class="selection"></label>
 								    <select id="gender">
-								      <option value="0" selected default disabled>Unicorn's Gender</option>
+								      <option value="" selected default disabled>Unicorn's Gender</option>
 								      <option value="1">Female</option>
 								      <option value="2">Male</option>
 								      <option value="3">Doesn't believe in gender</option>
 								    </select>	
 								    <!-- error -->
-								    <div><p>Choose one</p></div>
+								    <div class="hide"><p>Choose one</p></div>
 								    <!-- end error-->
 	  							</div><!-- input-field-->
 	  						</div><!--gender-->
@@ -66,18 +62,8 @@
 	      					        <label for="select"></label>
 								    <select id="color">
 								    <option value="0" selected default disabled>Fur color</option>
-								    <script>
-								    //don't know how to make it work if it's not here
-								        $.getJSON('js/document.json', function(data) {
-											console.log(data);
-														var fur = data.fur_color;
-														$.each(fur, function (index){
-															$('#color').append('<option value="' + fur[index].value +'">'+ fur[index].label +'</option>');
-														});
-											}); // close getJSON()
-								    </script>
 								    </select>	
-								    <div><p>Choose one</p></div>
+								    <div class="hide"><p>Choose one</p></div>
 	  							</div><!-- input-field-->
 	  						</div><!-- color-->
 							<div class="row horn">
@@ -95,17 +81,17 @@
 	 						</div><!-- horn-->
 		        			<div class="row mail">
 						        <div class="input-field">
-						          <input type="email" id="mail">
+						          <input type="email" id="email" class="validate">
 						          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
 						          <!-- error-->
-						          <div><i class="material-icons right">warning</i></div>
+						          <div class="hide"><i class="material-icons right">warning</i></div>
 						          <!-- end error-->
 						        </div><!-- input field-->
 	      					</div><!-- mail-->
 	      					<div class="row conditions">
 	      						<div class="check">
 		      						<p>
-									    <input type="checkbox" class="filled-in cyan" id="checkbox" name="checkbox" value="on">
+									    <input type="checkbox" class="filled-in cyan" id="checkbox" name="checkbox"  class="validate">
 										<label for="checkbox">I accept terms and conditions</label>
 		    						</p>
 	    						</div><!-- check-->
@@ -114,9 +100,9 @@
 								</div><!-- error -->
 	    					</div><!-- conditions--> 
 	    					<div class="row send">
-	    						<a class="btn cyan">Get my unicorn</a>
+	    						<button class="btn cyan" onclick="validate()">Get my unicorn</button>
 	    					</div><!-- send-->
-	    			</div><!-- col 12-->
+	    			</form><!-- col 12-->
 	    		</div><!--form-->
 			</main><!-- end main -->
 		</div><!-- end .container -->
