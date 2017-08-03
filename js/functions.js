@@ -17,5 +17,29 @@ $(document).ready(function() {
 	    $('.hack').css('width', val2); 
 	});//end type=range
 
-   
   }); //End Document Ready
+
+//This wont work in Chrome for security reasons
+$.getJSON('js/document.json', function(data) {
+	console.log(data);
+	var fur = data.fur_color;
+	$.each(fur, function (index){
+		$('#color').append('<option value="' + fur[index].value +'">'+ fur[index].label +'</option>');
+	});
+}); // close getJSON()
+/*
+$.ajax({
+  url: 'http://myjson.com/17cfa1',
+  dataType: 'jsonp',
+  success: function (data) {
+    var fur = data.fur_color;
+	$.each(fur, function (index){
+			$('#color').append('<option value="' + fur[index].value +'">'+ fur[index].label +'</option>');
+		});
+	}); // close getJSON()
+   error: function(jqXHR, textStatus, errorThrown) {
+     //Error handling code
+     alert('Oops there was an error');
+   }
+  }
+});*/
