@@ -24,7 +24,7 @@ $.getJSON('js/document.json', function(data) {
 	});
 }); // close getJSON()
 								    
-function validation(){
+function validate(){
 		var name = document.getElementById('name').value;
 		var gender = document.getElementById('gender').value;
 		var furColor = document.getElementById('fur').value;
