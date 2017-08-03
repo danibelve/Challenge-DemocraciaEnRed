@@ -31,15 +31,13 @@ h1{
 
 main{
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
 	flex-direction: column;
+	align-items: center;
 }
-/* I tried this before flex-box
 .form {
 	width: 50%;
-}*/
+}
 .line{
 	width: 75%;
 }
