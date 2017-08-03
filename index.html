@@ -28,6 +28,90 @@
 					<li class="title">Build-A-Unicorn!</li>
 				<ul>
 			</nav><!-- end nav -->
+			<main class="row">
+				<div class="row">
+			    		<h1 class="white-text">It's time to build your unicorn. Let's go!</h1>
+			    </div><!-- row for h1-->
+			    <div class="row white card-panel form">
+			    	<div class="col s12">
+				    		<div class="row name">
+					    		<div class="input-field">
+							          <input type="text">
+							          <label for="name" class="label" >Unicorn's Name</label>
+							          <!--error-->
+							          <div><p>Name your unicorn!</p></div>
+							          <!-- end error-->
+		        				</div><!-- input-field-->
+		        			</div><!-- name-->
+		        			<div class="row gender">
+	      						<div class="input-field">
+								    <label for="select" class="selection"></label>
+								    <select id="gender">
+								      <option value="0">Unicorn's Gender</option>
+								      <option value="1">Female</option>
+								      <option value="2">Male</option>
+								      <option value="3">Doesn't believe in gender</option>
+								    </select>	
+								    <!-- error -->
+								    <div><p>Choose one</p></div>
+								    <!-- end error-->
+	  							</div><!-- input-field-->
+	  						</div><!--gender-->
+	  						<div class="row color">
+	      						<div class="input-field">
+	      					        <label for="select"></label>
+								    <select id="color">
+								      <option  value="0" disabled selected>Fur color</option>
+								      <option value="1">Blue</option>
+								      <option value="2">Pink</option>
+								      <option value="3">Purple</option>
+								      <option value="4">Orange</option>
+								      <option value="5">Lime</option>
+								      <option value="6">Black</option>
+								      <option value="7">White</option>
+								      <option value="8">All of them!</option>
+								    </select>	
+								    <div><p>Choose one</p></div>
+	  							</div><!-- input-field-->
+	  						</div><!-- color-->
+							<div class="row horn">
+								<label for="range">Horn length</label>
+								<!-- need to check this -->
+								<div class="line">
+	      							<input type="range" min="5" max="25" />
+							      	<div class="line-scale">	
+								    	<label for="min">5 cm</label>
+								    	<label for="max">25 cm</label>
+								    </div><!-- line-scale -->
+							    </div><!--line-->
+
+	 						</div><!-- horn-->
+		        			<div class="row mail">
+						        <div class="input-field">
+						          <input type="email" id="mail">
+						          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
+						          <!-- error-->
+						          <div><i class="material-icons right">warning</i></div>
+						          <!-- end error-->
+						        </div><!-- input field-->
+	      					</div><!-- mail-->
+	      					<div class="row conditions">
+	      						<div class="check">
+		      						<p>
+									    <input type="checkbox" class="filled-in cyan" id="checkbox" name="checkbox" value="on">
+										<label for="checkbox">I accept terms and conditions</label>
+		    						</p>
+	    						</div><!-- check-->
+	    						<div class="row">
+									<p>You have to accept terms and conditions</p>
+								</div><!-- error -->
+	    					</div><!-- conditions--> 
+	    					<div class="row send">
+	    						<a class="btn cyan">Get my unicorn</a>
+	    					</div><!-- send-->
+	    			</div><!-- col 12-->
+	    		</div><!--form-->
+			</main><!-- end main -->
 		</div><!-- end .container -->
 		<!-- SCRIPTS -->
 		<script src="js/jquery-3.2.1.min.js"></script>
