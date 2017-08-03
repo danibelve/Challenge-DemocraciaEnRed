@@ -32,13 +32,13 @@
 			    		<h1 class="white-text">It's time to build your unicorn. Let's go!</h1>
 			    </div><!-- row for h1-->
 			    <div class="row white card-panel form">
-			    	<form class="col s12" action="" method="get">
+			    	<div class="col s12">
 				    		<div class="row name">
 					    		<div class="input-field">
-							          <input type="text" id="name">
+							          <input type="text" id="name" name="name">
 							          <label for="name" class="label">Unicorn's Name</label>
 							          <!--error-->
-							          <div id="name-error" class="hide"><p >Name your unicorn!</p></div>
+							          <div class="label" id="name-error"><p >Name your unicorn!</p></div>
 							          <!-- end error-->
 		        				</div><!-- input-field-->
 		        			</div><!-- name-->
@@ -52,7 +52,7 @@
 								      <option value="3">Doesn't believe in gender</option>
 								    </select>	
 								    <!-- error -->
-								    <div class="hide"><p>Choose one</p></div>
+								    <div><p>Choose one</p></div>
 								    <!-- end error-->
 	  							</div><!-- input-field-->
 	  						</div><!--gender-->
@@ -62,7 +62,7 @@
 								    <select id="color">
 								    <option value="0" selected default disabled>Fur color</option>
 								    </select>	
-								    <div class="hide"><p>Choose one</p></div>
+								    <div><p>Choose one</p></div>
 	  							</div><!-- input-field-->
 	  						</div><!-- color-->
 							<div class="row horn">
@@ -83,7 +83,7 @@
 						          <input type="email" id="email" class="validate">
 						          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
 						          <!-- error-->
-						          <div class="hide"><i class="material-icons right">warning</i></div>
+						          <div><i class="material-icons right">warning</i></div>
 						          <!-- end error-->
 						        </div><!-- input field-->
 	      					</div><!-- mail-->
@@ -99,9 +99,9 @@
 								</div><!-- error -->
 	    					</div><!-- conditions--> 
 	    					<div class="row send">
-	    						<button class="btn cyan" onclick="validate()">Get my unicorn</button>
+	    						<a class="btn cyan" onclick="validate()">Get my unicorn</a>
 	    					</div><!-- send-->
-	    			</form><!-- col 12-->
+	    			</div><!-- col 12-->
 	    		</div><!--form-->
 			</main><!-- end main -->
 		</div><!-- end .container -->

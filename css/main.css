@@ -71,6 +71,8 @@ label[for="range"]{
 .card-panel:hover{
 	 box-shadow: 0px 15px 25px rgba(0,0,0,0.24), 2px 15px 30px rgba(0,0,0,0.18);
 } 
+
+/* Input range setting */
 input[type=range] {
 	height: 20px;
 	/*width: 453px;*/
@@ -96,6 +98,16 @@ input[type=range]+.thumb {
     background: #00bcd4;
  
 }
+
+/* DISPLAY BLOCK FOR ERROR */
+
+#name-error{
+  display: none;
+}
+
+
+
+
 /*INPUT RANGE CODING USING THIS GUIDE: 
 http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html*/
 input[type=range]::-webkit-slider-runnable-track {
@@ -182,7 +194,3 @@ input[type=range]:focus::-ms-fill-upper {
   background: #DBDBDB;
  }
 
- /* FORM VALIDATION
- input:invalid + .help {
-    display:inline-block;
-}*/
