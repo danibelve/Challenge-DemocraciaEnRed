@@ -8,7 +8,7 @@ $(document).ready(function() {
 	    var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
 	    console.log(val);
 	    //it duplicates the input type range width property
-	    var val2 = val*414;
+	    var val2 = val*453;
 	    console.log(val2);
 
 	    $('.hack').css('width', val2); 
