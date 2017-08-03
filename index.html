@@ -12,6 +12,10 @@
 			
 			<!-- viewport -->
       		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      		<!-- scripts -->
+      		<!-- I had to do this because otherwise it wont read the JSON file -->
+      		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+			<script src="js/jquery-3.2.1.min.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -47,7 +51,7 @@
 	      						<div class="input-field">
 								    <label for="select" class="selection"></label>
 								    <select id="gender">
-								      <option value="0">Unicorn's Gender</option>
+								      <option value="0" selected default disabled>Unicorn's Gender</option>
 								      <option value="1">Female</option>
 								      <option value="2">Male</option>
 								      <option value="3">Doesn't believe in gender</option>
@@ -61,15 +65,17 @@
 	      						<div class="input-field">
 	      					        <label for="select"></label>
 								    <select id="color">
-								      <option  value="0" disabled selected>Fur color</option>
-								      <option value="1">Blue</option>
-								      <option value="2">Pink</option>
-								      <option value="3">Purple</option>
-								      <option value="4">Orange</option>
-								      <option value="5">Lime</option>
-								      <option value="6">Black</option>
-								      <option value="7">White</option>
-								      <option value="8">All of them!</option>
+								    <option value="0" selected default disabled>Fur color</option>
+								    <script>
+								    //don't know how to make it work if it's not here
+								        $.getJSON('js/document.json', function(data) {
+											console.log(data);
+														var fur = data.fur_color;
+														$.each(fur, function (index){
+															$('#color').append('<option value="' + fur[index].value +'">'+ fur[index].label +'</option>');
+														});
+											}); // close getJSON()
+								    </script>
 								    </select>	
 								    <div><p>Choose one</p></div>
 	  							</div><!-- input-field-->
@@ -115,6 +121,7 @@
 			</main><!-- end main -->
 		</div><!-- end .container -->
 		<!-- SCRIPTS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="js/jquery-3.2.1.min.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js"></script>
 		<script src="js/functions.js"></script>	
