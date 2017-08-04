@@ -76,5 +76,9 @@ function validate(){
 			  scrollTop: $('#name').offset().top}, 500);
 		}else{
 			//something
+			$(".form").empty();
+			$(".form").html('<div class="row"><h1>We are processing your request </h1>' + 
+								'<div class="progress"><div class="indeterminate"></div>'+
+								'</div> </div>');
 		}
 };//end function
