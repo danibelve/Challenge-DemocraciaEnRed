@@ -238,11 +238,20 @@ input[type=range]:focus::-ms-fill-upper {
  }
 
 /*-----------MEDIAQUERIES-----------*/
+@media screen and (max-width: 992px) {
+  .form{
+    width: 80%;
+  }
+
+}
 @media screen and (max-width: 600px) {
   h1{
     font-size: 2rem;
   }
+}
+@media screen and (max-width: 500px) {
   .form{
-    width: 80%;
+    width: 90%;
   }
+
 }
