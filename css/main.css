@@ -99,9 +99,9 @@ input[type=range]+.thumb {
  
 }
 
-/* Need !important to replace color */
+/* Need to replace color */
 .input-field label.label.active{
-  color: #AAAAAA !important; 
+  color: #AAAAAA; 
 }
 /*
 input:not([type]):focus:not([readonly]),
@@ -116,25 +116,42 @@ input:not([type]):focus:not([readonly]),
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid  #00BCD4 !important;
+  border-bottom: 1px solid  #00BCD4;
   -webkit-box-shadow: 0 1px 0 0 #00BCD4;
           box-shadow: 0 1px 0 0 #00BCD4;
 }
+.dropdown-content li>a, .dropdown-content li>span { 
+  color: black;
+  background-color: #EEEEEE; 
+  font-size: 15px; 
+  font-family: "roboto"; 
+}
 
+.select-dropdown li.disabled>span {
+  background-color: #EEEEEE;
+  color: #AAAAAA;
+}
 
 /* DISPLAY BLOCK FOR ERROR */
 
 #name-error, #email-error, #gender-error, #color-error,#checkbox-error{
   display: none;
   color: red;
-  font-size: 12px;
-  margin-top: -10px;
+  font-size: 14px;
+  margin-top: -14px;
 }
 #checkbox-error{
   margin-top: 8px;
 }
 
-
+/* -- FOR WARNING ICON*/
+#email-error i{
+ font-size: 16px;
+ margin-top: -8px;
+}
+input.invalid ~ div#email-error {
+ display: block; 
+} 
 
 
 

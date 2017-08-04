@@ -31,14 +31,17 @@ function validate(){
 		var name = document.getElementById('name').value;
 		var gender= document.getElementById('gender').value;
 		var color= document.getElementById('color').value;
-		var email = document.getElementById('email');
+		var email = document.getElementById('email').value;
 		var checkbox = document.getElementById('checkbox');
 
 		var error= [];
 		console.log(name);
 		if(name == '') {
-			/*$('#name-error').css("display","block");*/
+			$('#name-error').css("display","block");
+			/*$('#name-error').css("border-bottom", "1px solid red");*/
 			error ++;
+		}else{
+			$('#name-error').css("display","none");
 		}//name
 		if(gender== ''){
 			$('#gender-error').css("display","block");
@@ -60,9 +63,11 @@ function validate(){
    			$('#checkbox-error').css("display","none");
    		}//check
 
-   		if(email.hasClass("invalid")){
+   		if(email == ''){
    			$('#email-error').css("display","block");
 			error ++;
+   		}else{
+   			$('#email-error').css("display","none");
    		}//email
 
 		console.log(error);
