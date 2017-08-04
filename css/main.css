@@ -101,12 +101,16 @@ input[type=range]+.thumb {
 
 /* DISPLAY BLOCK FOR ERROR */
 
-#name-error{
+#name-error, #email-error, #gender-error, #color-error,#checkbox-error{
   display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
 }
-.email-error{
-  display:none;
+#checkbox-error{
+  margin-top: 8px;
 }
+
 
 
 

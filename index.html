@@ -36,7 +36,7 @@
 				    		<div class="row name">
 					    		<div class="input-field">
 							          <input type="text" id="name" name="name" required class="validate">
-							          <label for="name" class="label" data-error ="name you unicorn">Unicorn's Name</label>
+							          <label for="name" class="label" data-error ="Name you unicorn">Unicorn's Name</label>
 							          <!--error-->
 							          <div class="label" id="name-error"><p >Name your unicorn!</p></div>
 							          <!-- end error-->
@@ -52,7 +52,7 @@
 								      <option value="3">Doesn't believe in gender</option>
 								    </select>	
 								    <!-- error -->
-								    <div><p>Choose one</p></div>
+								    <div id= "gender-error"><p>Choose one</p></div>
 								    <!-- end error-->
 	  							</div><!-- input-field-->
 	  						</div><!--gender-->
@@ -60,9 +60,9 @@
 	      						<div class="input-field">
 	      					        <label for="select"></label>
 								    <select id="color">
-								    <option value="0" selected default disabled>Fur color</option>
+								    <option value="" selected default disabled>Fur color</option>
 								    </select>	
-								    <div><p>Choose one</p></div>
+								    <div id="color-error"><p>Choose one</p></div>
 	  							</div><!-- input-field-->
 	  						</div><!-- color-->
 							<div class="row horn">
@@ -83,7 +83,7 @@
 						          <input type="email" id="email" class="validate" required>
 						          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
 						          <!-- error-->
-						          <div class="email-error"><i class="material-icons red-text right">warning</i></div>
+						          <div id="email-error"><i class="material-icons red-text right">warning</i></div>
 						          <!-- end error-->
 						        </div><!-- input field-->
 	      					</div><!-- mail-->
@@ -94,7 +94,7 @@
 										<label for="checkbox">I accept terms and conditions</label>
 		    						</p>
 	    						</div><!-- check-->
-	    						<div class="row">
+	    						<div id="checkbox-error" class="row">
 									<p>You have to accept terms and conditions</p>
 								</div><!-- error -->
 	    					</div><!-- conditions--> 

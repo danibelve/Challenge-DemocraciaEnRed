@@ -27,12 +27,49 @@ $.getJSON('js/document.json', function(data) {
 }); // close getJSON()
 
 
-/*function validate(){
+function validate(){
 		var name = document.getElementById('name').value;
+		var gender= document.getElementById('gender').value;
+		var color= document.getElementById('color').value;
+		var email = document.getElementById('email');
+		var checkbox = document.getElementById('checkbox');
+
+		var error= [];
 		console.log(name);
 		if(name == '') {
-			$('#name-error').css("display","block");
+			/*$('#name-error').css("display","block");*/
+			error ++;
+		}//name
+		if(gender== ''){
+			$('#gender-error').css("display","block");
+			error ++;
+		}else{
+			$('#gender-error').css("display","none");
+		}//gender
+		if(color == ''){
+			$('#color-error').css("display","block");
+			error ++;
+		}else{
+			$('#color-error').css("display","none");
+		}//color
+
+		if (!jQuery("#checkbox").is(":checked")) {
+			$('#checkbox-error').css("display","block");
+			error ++;
+   		}else{
+   			$('#checkbox-error').css("display","none");
+   		}//check
+
+   		if(email.hasClass("invalid")){
+   			$('#email-error').css("display","block");
+			error ++;
+   		}//email
+
+		console.log(error);
+		if(error >= 1){
 			$('html, body').animate({
-			        scrollTop: $('#name').offset().top}, 500)
+			  scrollTop: $('#name').offset().top}, 500);
+		}else{
+			//something
 		}
-};//end function*/
+};//end function
