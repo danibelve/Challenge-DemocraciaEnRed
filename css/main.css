@@ -11,16 +11,17 @@ body{
 	background: linear-gradient(45deg, rgba(216,178,193,1) 0%,rgba(216,178,193,0.97) 26%,rgba(134,196,198,0.9) 98%,rgba(132,197,198,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8b2c1', endColorstr='#e684c5c6',GradientType=1); /* IE6-9 fallback on horizontal gradient */
 }
-.hamburger{
+.hamburger i{
 	padding-left: 5px;
+  margin-top: 5px;
+}
+nav{
+ /* margin-top: -50px;*/
 }
 
 .title{
-	padding-left: 20px;
+	margin-left: 10px;
 	font-weight: 500; /* medium */
-}
-.pad{
-	margin-top: 64px;
 }
 
 h1{
@@ -232,3 +233,12 @@ input[type=range]:focus::-ms-fill-upper {
   background: #DBDBDB;
  }
 
+/*-----------MEDIAQUERIES-----------*/
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: 2rem;
+  }
+  .form{
+    width: 80%;
+  }
+}

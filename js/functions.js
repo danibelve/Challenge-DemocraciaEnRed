@@ -1,4 +1,41 @@
 $(document).ready(function() {
+	//This  will make it work in Chrome and FF
+	var fur = {
+	    "fur_color": [
+	      {
+	        "label": "Blue",
+	        "value": "blu"
+	      },
+	      {
+	        "label": "Pink",
+	        "value": "pin"
+	      },
+	      {
+	        "label": "Purple",
+	        "value": "pur"
+	      },
+	      {
+	        "label": "Orange",
+	        "value": "ora"
+	      },
+	      {
+	        "label": "Lime",
+	        "value": "lim"
+	      },
+	      {
+	        "label": "Black",
+	        "value": "bla"
+	      },
+	      {
+	        "label": "White",
+	        "value": "whi"
+	      }
+	    ]
+	  };
+	 $.each(fur.fur_color, function (index){
+	    console.log(fur.fur_color[index].label);
+	  $('#color').append('<option value="' + fur.fur_color[index].value +'">'+ fur.fur_color[index].label +'</option>');
+	 });
 	//Initialize select elements
     $('select').material_select();
     //Activate dropdown
@@ -17,14 +54,14 @@ $(document).ready(function() {
 	});//end type=range
   }); //End Document Ready
 
-//This wont work in Chrome for security reasons
-$.getJSON('js/document.json', function(data) {
+//This wont work in Chrome for security reasons, but it does on FireFox
+/*$.getJSON('js/document.json', function(data) {
 	console.log(data);
 	var fur = data.fur_color;
 	$.each(fur, function (index){
 		$('#color').append('<option value="' + fur[index].value +'">'+ fur[index].label +'</option>');
 	});
-}); // close getJSON()
+}); // close getJSON()*/
 
 
 function validate(){
