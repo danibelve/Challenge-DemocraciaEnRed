@@ -67,10 +67,10 @@
 			    		<h1 class="white-text">It's time to build your unicorn. Let's go!</h1>
 			    </div><!-- row for h1-->
 			    <div class="row white card-panel form">
-			    	<div class="col s12">
+			    	<form method="post" action="" class="col s12">
 				    		<div class="row name">
 					    		<div class="input-field">
-							          <input type="text" id="name" name="name" required class="validate">
+							          <input type="text" id="name" name="name" required class="validate" required>
 							          <label for="name" class="label" data-error ="Name you unicorn">Unicorn's Name</label>
 							          <!--error-->
 							          <div class="label" id="name-error"><p >Name your unicorn!</p></div>
@@ -118,7 +118,8 @@
 						          <input type="email" id="email" class="validate" required>
 						          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
 						          <!-- error-->
-						          <div id="email-error"><i class="material-icons red-text right">warning</i></div>
+						          <div id="email-error"><i class="material-icons red-text right">warning</i>
+						          <div id="emai-msg"></div></div>
 						          <!-- end error-->
 						        </div><!-- input field-->
 	      					</div><!-- mail-->
@@ -134,9 +135,9 @@
 								</div><!-- error -->
 	    					</div><!-- conditions--> 
 	    					<div class="row send">
-	    						<a class="btn cyan darken-1" onclick="validate()">Get my unicorn</a>
+	    						<button class="btn cyan darken-1" onclick="validate()">Get my unicorn</button>
 	    					</div><!-- send-->
-	    			</div><!-- col 12-->
+	    			</form><!-- col 12-->
 	    		</div><!--form-->
 			</main><!-- end main -->
 		</div><!-- end .container -->

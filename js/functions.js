@@ -83,7 +83,7 @@ function validate(){
 		var error= [];
 		console.log(name);
 		if(name == '') {
-			$('#name-error').css("display","block");
+			/*$('#name-error').css("display","block");*/
 			/*$('#name-error').css("border-bottom", "1px solid red");*/
 			error ++;
 		}else{
@@ -110,7 +110,12 @@ function validate(){
    		}//check
 
    		if(email == ''){
+   			$('#email-msg').css("display","block");
    			$('#email-error').css("display","block");
+   			/*if($("label[for=email]").is("active")){
+   				$('#email-error').empty();
+   				$('#email-error').html('<i class="material-icons red-text right">warning</i>');
+   			}*/
 			error ++;
    		}else{
    			$('#email-error').css("display","none");

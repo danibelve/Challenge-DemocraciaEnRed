@@ -136,6 +136,11 @@ textarea.materialize-textarea:focus:not([readonly]) {
   font-size: 14px;
   margin-top: -14px;
 }
+#email-msg{
+  display:none;
+    color: red;
+  font-size: 14px;
+}
 #checkbox-error{
   margin-top: 8px;
 }
@@ -145,7 +150,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
  font-size: 16px;
  margin-top: -8px;
 }
-input.invalid ~ div#email-error {
+input.invalid ~ div#email-error i {
  display: block; 
 } 
 
