@@ -104,6 +104,9 @@ input[type=range]+.thumb {
 #name-error{
   display: none;
 }
+.email-error{
+  display:none;
+}
 
 
 

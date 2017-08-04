@@ -35,8 +35,8 @@
 			    	<div class="col s12">
 				    		<div class="row name">
 					    		<div class="input-field">
-							          <input type="text" id="name" name="name">
-							          <label for="name" class="label">Unicorn's Name</label>
+							          <input type="text" id="name" name="name" required class="validate">
+							          <label for="name" class="label" data-error ="name you unicorn">Unicorn's Name</label>
 							          <!--error-->
 							          <div class="label" id="name-error"><p >Name your unicorn!</p></div>
 							          <!-- end error-->
@@ -80,10 +80,10 @@
 	 						</div><!-- horn-->
 		        			<div class="row mail">
 						        <div class="input-field">
-						          <input type="email" id="email" class="validate">
+						          <input type="email" id="email" class="validate" required>
 						          <label for="email" class="label" data-error="Not a valid email address!">Email address</label>
 						          <!-- error-->
-						          <div><i class="material-icons right">warning</i></div>
+						          <div class="email-error"><i class="material-icons red-text right">warning</i></div>
 						          <!-- end error-->
 						        </div><!-- input field-->
 	      					</div><!-- mail-->
