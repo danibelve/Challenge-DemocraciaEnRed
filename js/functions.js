@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 
 
-	
+
 	//This  will make it work in Chrome and FF
 	var fur = {
 	    "fur_color": [
